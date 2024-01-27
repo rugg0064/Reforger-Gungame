@@ -1,0 +1,18 @@
+RUGG_boundaryManagerEntity {
+ ID "604D7394D8D5E3F7"
+ components {
+  RplComponent "{604E167ACDAB2FCA}" {
+  }
+ }
+ coords 2.623 4.259 -0.173
+ TriggerShapeType "Oriented Bounding Box"
+ BoxMins -4 -2 -4
+ BoxMaxs 4 2 4
+ DrawShape 1
+ TriggerActivationType "All changes"
+ PeriodicQueries 1
+ UpdatePeriod 0.1
+ ClassesFilter {
+  "ChimeraCharacter"
+ }
+}

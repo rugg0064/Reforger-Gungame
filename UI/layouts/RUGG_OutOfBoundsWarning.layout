@@ -1,0 +1,23 @@
+FrameWidgetClass {
+ Name "rootFrame"
+ {
+  RichTextWidgetClass "{604E166696BBB587}" : "{5E0F8422A1F05728}UI/layouts/WidgetLibrary/RichTextWidgets/RichText_Heading2.layout" {
+   Name "Text0"
+   Slot FrameWidgetSlot "{604E166696BBB592}" {
+    PositionX 1.282
+    OffsetLeft 1.282
+    PositionY -0.999
+    OffsetTop -0.999
+    SizeX 1917.68
+    OffsetRight -1918.96
+    SizeY 1079.23
+    OffsetBottom -1078.23
+   }
+   Text "You have left the arena, go back!"
+   "Font Size" 69
+   "Min Font Size" 55
+   "Horizontal Alignment" Center
+   "Vertical Alignment" Center
+  }
+ }
+}

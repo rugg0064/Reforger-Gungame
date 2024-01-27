@@ -1,0 +1,9 @@
+SCR_LoadoutManager : "{97EF4C1A41F63DDB}Prefabs/MP/Managers/Loadouts/LoadoutManager_USxUSSR.et" {
+ ID "56B2B47708C4F23A"
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{56B2B461C34A570F}" {
+   m_sLoadoutName "Character"
+   m_sAffiliatedFaction "FFA"
+  }
+ }
+}
