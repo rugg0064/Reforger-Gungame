@@ -5,7 +5,8 @@ RUGG_boundaryManagerEntity {
   }
  }
  coords 2.623 4.259 -0.173
- TriggerShapeType "Oriented Bounding Box"
+ TriggerShapeType Sphere
+ SphereRadius 30
  BoxMins -4 -2 -4
  BoxMaxs 4 2 4
  DrawShape 1

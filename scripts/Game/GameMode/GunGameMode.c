@@ -15,12 +15,10 @@ class GunGameMode : SCR_BaseGameMode
 	
 	ref map<int, int> playerScoreMap = new map<int, int>();
 	
-	void GunGameMode(IEntitySource src,IEntity parent )
+	void GunGameMode(IEntitySource src, IEntity parent )
 	{
 		if(gunGameMode)
 		{
-			Print("Only one GameMode can exist at a time");
-			delete this;
 			return;
 		}
 		gunGameMode = this;
@@ -87,15 +85,6 @@ class GunGameMode : SCR_BaseGameMode
 		{
 			return;
 		}
-		ChimeraCharacter killerCharacter = ChimeraCharacter.Cast(killerEntity);
-		if(killerCharacter.FindComponent(SCR_AchievementsHandler) && SCR_AchievementsHandler.Cast(killerCharacter.FindComponent(SCR_AchievementsHandler)))
-		{
-			SCR_AchievementsHandler achievementHandler = SCR_AchievementsHandler.Cast(killerCharacter.FindComponent(SCR_AchievementsHandler));
-			achievementHandler.UnlockAchievement(AchievementId.ONE_TO_WATCH);
-		}
-
-		
-		
 		int killerId = killer.GetInstigatorPlayerID();
 		bool suicide = playerId == killerId;
 		if(suicide)
