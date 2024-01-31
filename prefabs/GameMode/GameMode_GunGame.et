@@ -1,7 +1,11 @@
 GunGameMode : "{888DF221E7026820}Prefabs/MP/Modes/Deathmatch/GameMode_Deathmatch_Base.et" {
  ID "56B2B479C6B96951"
  components {
-  RespawnWeaponProvider "{56B2B4793051E7C9}" {
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic RespawnWeaponProviderLogic "{5D38D0BFF5080D6F}" {
+   }
+  }
+  SCR_RespawnSystemComponent "{607C4981418C85E1}" {
   }
  }
  m_bUseSpawnPreload 0
@@ -10,12 +14,12 @@ GunGameMode : "{888DF221E7026820}Prefabs/MP/Modes/Deathmatch/GameMode_Deathmatch
    resourceName "{C0F7DD85A86B2900}Prefabs/Weapons/Handguns/PM/Handgun_PM.et"
    type "GUN"
   }
-  GunGameWeaponSelection "{60790E6E4E5DAE34}" {
-   resourceName "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et"
-   type "GUN"
-  }
   GunGameWeaponSelection "{60790E6E4E23B562}" {
    resourceName "{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et"
+   type "GUN"
+  }
+  GunGameWeaponSelection "{60790E6E4E5DAE34}" {
+   resourceName "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et"
    type "GUN"
   }
   GunGameWeaponSelection "{60790E6E4E0360D5}" {

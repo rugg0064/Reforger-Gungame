@@ -15,8 +15,19 @@ class GunGameMode : SCR_BaseGameMode
 	
 	ref map<int, int> playerScoreMap = new map<int, int>();
 	
+	string GetPlayerScoreMapString()
+	{
+		string returnString = "";
+		foreach(int i, int j: playerScoreMap)
+		{
+			returnString += "" + i + " - " + j + "\n";
+		}
+		return returnString;
+	}
+	
 	void GunGameMode(IEntitySource src, IEntity parent )
 	{
+		playerScoreMap = new map<int, int>();
 		if(gunGameMode)
 		{
 			return;
@@ -52,7 +63,7 @@ class GunGameMode : SCR_BaseGameMode
 		playerScoreMap.Set(playerId, 0);
 	}
 	
-	private void handleWin(int winnerId)
+	void handleWin(int winnerId)
 	{
 		bool didIWin = GetGame().GetPlayerController().GetPlayerId() == winnerId;
 		EGameOverTypes reason;
@@ -79,7 +90,10 @@ class GunGameMode : SCR_BaseGameMode
 	
 	protected override void OnPlayerKilled(int playerId, IEntity playerEntity, IEntity killerEntity, notnull Instigator killer)
 	{
+		Print("OnPlayerKilled on GunGameMode.c but its commented out");
 		super.OnPlayerKilled(playerId, playerEntity, killerEntity, killer);
+		
+		/*
 		// Killer was not an entity, do nothing
 		if(!ChimeraCharacter.Cast(killerEntity))
 		{
@@ -100,5 +114,6 @@ class GunGameMode : SCR_BaseGameMode
 			playerScoreMap.Set(killerId, clampScore(playerScoreMap[killerId] + 1));
 			GunGameUtils.SetPlayerWeapon(ChimeraCharacter.Cast(killerEntity), killerId);
 		}
+		*/
 	}
 }
