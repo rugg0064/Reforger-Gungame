@@ -13,7 +13,7 @@ class GunGameMode : SCR_BaseGameMode
 	[Attribute("", UIWidgets.Object, category: "Weapon List")]
 	ref array<ref GunGameWeaponSelection> PlayerLoadouts;
 	
-	ref map<int, int> playerScoreMap = new map<int, int>();
+	ref map<int, int> playerScoreMap;
 	
 	string GetPlayerScoreMapString()
 	{
@@ -33,6 +33,7 @@ class GunGameMode : SCR_BaseGameMode
 			return;
 		}
 		gunGameMode = this;
+		StartGameMode();
 	}
 	
 	int clampScore(int score)
@@ -43,7 +44,7 @@ class GunGameMode : SCR_BaseGameMode
 		}
 		if(score >= PlayerLoadouts.Count())
 		{
-			return PlayerLoadouts.Count()-1;
+			return PlayerLoadouts.Count() - 1;
 		}
 		return score;
 	}
@@ -55,65 +56,25 @@ class GunGameMode : SCR_BaseGameMode
 	
 	override void OnGameStart()
 	{
-		
+		super.OnGameStart();
+		// Uncomment to test game end scenario
+		//GetGame().GetCallqueue().CallLater(handleWin, 5000, false, 1);
 	}
 	
 	override void OnPlayerConnected(int playerId)
 	{
+		super.OnPlayerConnected(playerId);
 		playerScoreMap.Set(playerId, 0);
 	}
-	
+
+	// TODO: BUG: This doesn't work for peertool clients, only hosting editor client.
 	void handleWin(int winnerId)
 	{
-		bool didIWin = GetGame().GetPlayerController().GetPlayerId() == winnerId;
-		EGameOverTypes reason;
-		if(didIWin)
-		{
-			reason = EGameOverTypes.DEATHMATCH_VICTORY_SCORE;
-		}
-		else
-		{
-			reason = EGameOverTypes.ENDREASON_SCORELIMIT;
-		}
-		
-		EndGameMode(SCR_GameModeEndData.CreateSimple(
-			reason: EGameOverTypes.ENDREASON_SCORELIMIT,
-			winnerId: winnerId
-		));
-		//GameStateTransitions.RequestScenarioChangeTransition()
-	}
-	
-	override void OnGameEnd()
-	{
-		Print("The game is ending!");
-	}
-	
-	protected override void OnPlayerKilled(int playerId, IEntity playerEntity, IEntity killerEntity, notnull Instigator killer)
-	{
-		Print("OnPlayerKilled on GunGameMode.c but its commented out");
-		super.OnPlayerKilled(playerId, playerEntity, killerEntity, killer);
-		
-		/*
-		// Killer was not an entity, do nothing
-		if(!ChimeraCharacter.Cast(killerEntity))
-		{
-			return;
-		}
-		int killerId = killer.GetInstigatorPlayerID();
-		bool suicide = playerId == killerId;
-		if(suicide)
-		{
-			playerScoreMap.Set(playerId, clampScore(playerScoreMap[playerId] - 1));
-		}
-		else
-		{
-			if(playerScoreMap[killerId] == PlayerLoadouts.Count() - 1)
-			{
-				handleWin(killerId);
-			}
-			playerScoreMap.Set(killerId, clampScore(playerScoreMap[killerId] + 1));
-			GunGameUtils.SetPlayerWeapon(ChimeraCharacter.Cast(killerEntity), killerId);
-		}
-		*/
+        EndGameMode(SCR_GameModeEndData.CreateSimple(
+            reason: EGameOverTypes.ENDREASON_SCORELIMIT,
+            winnerId: winnerId
+        ));
+		// Move to different scenario?
+		//GameStateTransitions.RequestScenarioChangeTransition("{2E8461FFAB4BCCD5}Worlds/Minimal_World/RUGG_Minimal_World.ent", "GungameImplementationMinimal")
 	}
 }

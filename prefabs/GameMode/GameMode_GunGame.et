@@ -12,55 +12,11 @@ GunGameMode : "{888DF221E7026820}Prefabs/MP/Modes/Deathmatch/GameMode_Deathmatch
  PlayerLoadouts {
   GunGameWeaponSelection "{60790E6E4DBB17C2}" {
    resourceName "{C0F7DD85A86B2900}Prefabs/Weapons/Handguns/PM/Handgun_PM.et"
-   type "GUN"
-  }
-  GunGameWeaponSelection "{60790E6E4E23B562}" {
-   resourceName "{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et"
-   type "GUN"
+   type "PISTOL"
   }
   GunGameWeaponSelection "{60790E6E4E5DAE34}" {
-   resourceName "{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et"
+   resourceName "{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et"
    type "GUN"
-  }
-  GunGameWeaponSelection "{60790E6E4E0360D5}" {
-   resourceName "{3E413771E1834D2F}Prefabs/Weapons/Rifles/M16/Rifle_M16A2.et"
-   type "GUN"
-  }
-  GunGameWeaponSelection "{60790E6E27BE2BDC}" {
-   resourceName "{A7AF84C6C58BA3E8}Prefabs/Weapons/MachineGuns/RPK74/MG_RPK74.et"
-   type "GUN"
-  }
-  GunGameWeaponSelection "{60790E6E4E3E2B51}" {
-   resourceName "{D2B48DEBEF38D7D7}Prefabs/Weapons/MachineGuns/M249/MG_M249.et"
-   type "GUN"
-  }
-  GunGameWeaponSelection "{60790E6E27928C3B}" {
-   resourceName "{A89BC9D55FFB4CD8}Prefabs/Weapons/MachineGuns/PKM/MG_PKM.et"
-   type "GUN"
-  }
-  GunGameWeaponSelection "{60790E6E27A54CFC}" {
-   resourceName "{D182DCDD72BF7E34}Prefabs/Weapons/MachineGuns/M60/MG_M60.et"
-   type "GUN"
-  }
-  GunGameWeaponSelection "{60790E6E184DC477}" {
-   resourceName "{3EB02CDAD5F23C82}Prefabs/Weapons/Rifles/SVD/Rifle_SVD.et"
-   type "GUN"
-  }
-  GunGameWeaponSelection "{60790E6E18630A05}" {
-   resourceName "{B31929F65F0D0279}Prefabs/Weapons/Rifles/M14/Rifle_M21.et"
-   type "GUN"
-  }
-  GunGameWeaponSelection "{60790E6E187A1255}" {
-   resourceName "{7A82FE978603F137}Prefabs/Weapons/Launchers/RPG7/Launcher_RPG7.et"
-   type "GUN"
-  }
-  GunGameWeaponSelection "{60790E6EC05F336B}" {
-   resourceName "{9C5C20FB0E01E64F}Prefabs/Weapons/Launchers/M72/Launcher_M72A3.et"
-   type "GUN"
-  }
-  GunGameWeaponSelection "{60790E6EC071C06C}" {
-   resourceName "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et"
-   type "GRENADE"
   }
  }
 }

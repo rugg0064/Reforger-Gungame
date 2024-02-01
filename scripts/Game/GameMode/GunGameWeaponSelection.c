@@ -4,7 +4,7 @@ class GunGameWeaponSelection
 	[Attribute("", UIWidgets.ResourceNamePicker, params: "")]
 	ResourceName resourceName;
 	
-	[Attribute("GUN/GRENADE", UIWidgets.EditBox, params: "et")]
+	[Attribute("GUN/GRENADE/PISTOL", UIWidgets.EditBox, params: "et")]
 	string type;
 	
 	ResourceName getResourceName()
