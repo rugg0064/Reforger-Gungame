@@ -12,11 +12,11 @@ As this addon is only the gamemode files, there is no map or mission included. Y
 
 You can make your own Gun Game implementation using this base addon by creating a new addon that depends on this one. This new addon will need to provide or depend on a map that has the following entities:
 
-- GameMode_GunGame.et, you can override or duplicate it to configure the weapon list within this prefab.
-- Spawn points, use SpawnPoint_GunGame.et to avoid future incompatibilities
-- LoadoutManager_GunGame.et
-- FactionManager_FFA.et
-- (Optional) an ArenaManager.et to ensure players don't leave the play area
+- `GameMode_GunGame.et`, you can override or duplicate it to configure the weapon list within this prefab.
+- Spawn points, use `SpawnPoint_GunGame.et` to avoid future incompatibilities
+- `LoadoutManager_GunGame.et`
+- `FactionManager_FFA.et`
+- (Optional) an `ArenaManager.et` to ensure players don't leave the play area
 
 To turn this into a scenario that can be played, see [example](https://github.com/rugg0064/Reforger-Gungame-Minimal-Implementation/blob/main/Missions/GungameMinimal.conf).
 
