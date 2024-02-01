@@ -14,9 +14,57 @@ GunGameMode : "{888DF221E7026820}Prefabs/MP/Modes/Deathmatch/GameMode_Deathmatch
    resourceName "{C0F7DD85A86B2900}Prefabs/Weapons/Handguns/PM/Handgun_PM.et"
    type "PISTOL"
   }
-  GunGameWeaponSelection "{60790E6E4E5DAE34}" {
-   resourceName "{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et"
+  GunGameWeaponSelection "{60826162B3BE9CB3}" {
+   resourceName "{809488C4984AC087}Prefabs/Weapons/Handguns/M9/Handgun_M9_base.et"
+   type "PISTOL"
+  }
+  GunGameWeaponSelection "{60826162B47B9DB1}" {
+   resourceName "{43497A18DD888667}Prefabs/Weapons/Rifles/AK74/Rifle_AK74_base.et"
    type "GUN"
+  }
+  GunGameWeaponSelection "{60826162B410EFAB}" {
+   resourceName "{C63227C0E70EA62E}Prefabs/Weapons/Rifles/M16/Rifle_M16A2_base.et"
+   type "GUN"
+  }
+  GunGameWeaponSelection "{60826162B42A7AAF}" {
+   resourceName "{C19BFAF8A6334FD5}Prefabs/Weapons/Rifles/VZ58/Rifle_VZ58_base.et"
+   type "GUN"
+  }
+  GunGameWeaponSelection "{60826162B43D4B7F}" {
+   resourceName "{6E42C85D9FC0CA5D}Prefabs/Weapons/MachineGuns/M60/MG_M60_base.et"
+   type "GUN"
+  }
+  GunGameWeaponSelection "{60826162B4D674DD}" {
+   resourceName "{3BFBE9145E9C40B9}Prefabs/Weapons/MachineGuns/RPK74/MG_RPK74_base.et"
+   type "GUN"
+  }
+  GunGameWeaponSelection "{60826162B4EB1866}" {
+   resourceName "{599A1E833BEF3A43}Prefabs/Weapons/MachineGuns/M249/MG_M249_base.et"
+   type "GUN"
+  }
+  GunGameWeaponSelection "{60826162B4FC5CF5}" {
+   resourceName "{76C400582D3C4AF9}Prefabs/Weapons/MachineGuns/PKM/MG_PKM_base.et"
+   type "GUN"
+  }
+  GunGameWeaponSelection "{60826162B490847B}" {
+   resourceName "{81EB948E6414BD6F}Prefabs/Weapons/Rifles/M14/Rifle_M21_ARTII.et"
+   type "GUN"
+  }
+  GunGameWeaponSelection "{60826162B4AA97F6}" {
+   resourceName "{6415B7923DE28C1B}Prefabs/Weapons/Rifles/SVD/Rifle_SVD_PSO.et"
+   type "GUN"
+  }
+  GunGameWeaponSelection "{60826162B4BE4A14}" {
+   resourceName "{37F022D0CDC84C11}Prefabs/Weapons/Launchers/M72/Launcher_M72A3_base.et"
+   type "GUN"
+  }
+  GunGameWeaponSelection "{60826162B574E81B}" {
+   resourceName "{BD048236F83D85DA}Prefabs/Weapons/Launchers/RPG7/Launcher_RPG7_base.et"
+   type "GUN"
+  }
+  GunGameWeaponSelection "{608261634AA49210}" {
+   resourceName "{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et"
+   type "GRENADE"
   }
  }
 }
